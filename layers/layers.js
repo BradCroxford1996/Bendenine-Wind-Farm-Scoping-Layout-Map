@@ -1,6 +1,6 @@
 var wms_layers = [];
-
-
+ 
+ 
         var lyr_GoogleHybrid_0 = new ol.layer.Tile({
             'title': 'Google Hybrid',
             'type':'base',
@@ -26,21 +26,6 @@ var lyr_Onsitesubstation_1 = new ol.layer.Vector({
                 popuplayertitle: 'Onsite substation',
                 interactive: true,
                 title: '<img src="styles/legend/Onsitesubstation_1.png" /> Onsite substation'
-            });
-var format_Sitecompound_2 = new ol.format.GeoJSON();
-var features_Sitecompound_2 = format_Sitecompound_2.readFeatures(json_Sitecompound_2, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Sitecompound_2 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_Sitecompound_2.addFeatures(features_Sitecompound_2);
-var lyr_Sitecompound_2 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_Sitecompound_2, 
-                style: style_Sitecompound_2,
-                popuplayertitle: 'Site compound',
-                interactive: true,
-                title: '<img src="styles/legend/Sitecompound_2.png" /> Site compound'
             });
 var format_Accesstracks_3 = new ol.format.GeoJSON();
 var features_Accesstracks_3 = format_Accesstracks_3.readFeatures(json_Accesstracks_3, 
@@ -102,23 +87,20 @@ var lyr_SiteAccessPoint_6 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/SiteAccessPoint_6.png" /> Site Access Point'
             });
-
-lyr_GoogleHybrid_0.setVisible(true);lyr_Onsitesubstation_1.setVisible(true);lyr_Sitecompound_2.setVisible(true);lyr_Accesstracks_3.setVisible(true);lyr_ScopingTurbinelayout_4.setVisible(true);lyr_ProjectBoundary_5.setVisible(true);lyr_SiteAccessPoint_6.setVisible(true);
-var layersList = [lyr_GoogleHybrid_0,lyr_Onsitesubstation_1,lyr_Sitecompound_2,lyr_Accesstracks_3,lyr_ScopingTurbinelayout_4,lyr_ProjectBoundary_5,lyr_SiteAccessPoint_6];
+ 
+lyr_GoogleHybrid_0.setVisible(true);lyr_Onsitesubstation_1.setVisible(true);lyr_Accesstracks_3.setVisible(true);lyr_ScopingTurbinelayout_4.setVisible(true);lyr_ProjectBoundary_5.setVisible(true);lyr_SiteAccessPoint_6.setVisible(true);
+var layersList = [lyr_GoogleHybrid_0,lyr_Onsitesubstation_1,lyr_Accesstracks_3,lyr_ScopingTurbinelayout_4,lyr_ProjectBoundary_5,lyr_SiteAccessPoint_6];
 lyr_Onsitesubstation_1.set('fieldAliases', {'Descriptio': 'Descriptio', });
-lyr_Sitecompound_2.set('fieldAliases', {'Descriptio': 'Descriptio', });
 lyr_Accesstracks_3.set('fieldAliases', {});
 lyr_ScopingTurbinelayout_4.set('fieldAliases', {});
 lyr_ProjectBoundary_5.set('fieldAliases', {'Descriptio': 'Descriptio', });
 lyr_SiteAccessPoint_6.set('fieldAliases', {'Descriptio': 'Descriptio', });
 lyr_Onsitesubstation_1.set('fieldImages', {'Descriptio': 'TextEdit', });
-lyr_Sitecompound_2.set('fieldImages', {'Descriptio': '', });
 lyr_Accesstracks_3.set('fieldImages', {});
 lyr_ScopingTurbinelayout_4.set('fieldImages', {});
 lyr_ProjectBoundary_5.set('fieldImages', {'Descriptio': 'TextEdit', });
 lyr_SiteAccessPoint_6.set('fieldImages', {'Descriptio': 'TextEdit', });
 lyr_Onsitesubstation_1.set('fieldLabels', {'Descriptio': 'no label', });
-lyr_Sitecompound_2.set('fieldLabels', {'Descriptio': 'inline label - always visible', });
 lyr_Accesstracks_3.set('fieldLabels', {});
 lyr_ScopingTurbinelayout_4.set('fieldLabels', {});
 lyr_ProjectBoundary_5.set('fieldLabels', {'Descriptio': 'no label', });
